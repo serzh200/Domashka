@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.parent {
+  display: flex;
+  height: 300px; 
+}
+
+.child {
+  width: 100px;  /* Или что угодно */
+  height: 100px; /* Или что угодно */
+  margin: auto;  /* Магия! */
+
+.flex-container{
+  /* Сначала создадим flex-контекст */
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-around;
+  .navigation {
+  display: flex;
+  flex-flow: row wrap;
+  /* Сдвигает элементы к концу строки по главной оси */
+  justify-content: flex-end;
+}
+
+/* Экраны среднего размера */
+@media all and (max-width: 800px) {
+  .navigation {
+    /* Для экранов среднего размера мы выравниваем навигацию по центру, 
+    равномерно распредляя свободное место между элементами */
+    justify-content: space-around;
+  }
+}
+
+/* Маленькие экраны */
+@media all and (max-width: 500px) {
+  .navigation {
+    /* На маленьких экранах вместо строки мы располагаем элементы в столбце */
+    flex-direction: column;
+  }
+}
+}
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Задаём всем элеметам ширину в 100% */
+.header, .main, .nav, .aside, .footer {
+  flex: 1 100%;
+}
+
+/* В этом случае мы полагаемся на исходный порядок для ориентации на 
+ * мобильные устройства:
+ * 1. header
+ * 2. nav
+ * 3. main
+ * 4. aside
+ * 5. footer
+ */
+
+/* Экраны среднего размера */
+@media all and (min-width: 600px) {
+  /* Оба сайдбара располагаются в одной строке */
+  .aside { flex: 1 auto; }
+}
+
+/* Большие экраны */
+@media all and (min-width: 800px) {
+  /* Мы меняем местами элементы .aside-1 и .main, а также сообщаем
+   * элементу .main забирать в два раза больше места, чем сайдбары.
+   */
+  .main { flex: 2 0px; }
+
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+</style>
+</head>
+</body>
