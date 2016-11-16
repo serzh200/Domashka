@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title> DZ3</title>
+  <style>
+  body{  
+    background: #fefefe;
+    margin: 0;
+    padding: 0 ;
+    font: 1em/1.3em Arial, Tahoma;
+    color: #272727;
+}
+
+img{
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	border: none;
+}
+main{
+	margin: 20px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 3px;
+	}
+.bl{
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	background: #fffde1;
+	border-radius: 3px;
+	margin: 20px; 
+}
+.main{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 1000px;
+	margin: 20px auto;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+	flex-flow: row wrap;
+}
+
+.bl{
+flex: 100%; text-align: center
+}
+
+.fl1{background: #7cd2dd; border-color: #6fbac4; flex-basis: 100%;}
+.fl2{background: #95d051; border-color: #85b948; flex-basis: 30%;}
+.fl3{background: #eb9e65; border-color: #cc8a58; flex-basis: 30%;}
+.fl4{background: #d051d0; border-color: #d051d0; flex-basis: 30%;}
+.fl5{background: #456789; border-color: #328765; order: 6; flex-basis: 400px;}
+.fl6{background: #987656; border-color: #766777; order: 5; flex-basis: 400px;}
+.fl7{background: #7cd2dd; border-color: #6fdac5; order: 7; flex-basis: 100%;}
+  </style>
+ </head> 
+ <body> 
+
+<div class="main">
+	<div class="bl fl1"><b>Header</b></div>
+		<div class="bl fl2"><b>Container1</b></div>
+		<div class="bl fl3"><b>Container2</b></div>
+		<div class="bl fl4"><b>Container3</b></div>
+		<div class="bl fl5"><b>Container4</b></div>
+		<div class="bl fl6"><b>Container5</b></div>
+	<div class="bl fl7"><b>Footer</b></div>
+</div>
+
+ </body>
+</html>
+
