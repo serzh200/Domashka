@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Metod Promt()</title>
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    var a = parseFloat (prompt("Введите первое число", ""));
+    var b = prompt("Введите знак операции:");
+    var e = parseFloat (prompt("Введите второе число", ""));
+    var d ;
+        switch (b) {
+
+        	case "+":
+            var d = a + e
+   			break;
+
+        	case "-":
+            var d = a - e
+            break;
+
+            case "*": 
+            var d = a * e
+            break;
+
+            case "/": 
+            var d = a / e
+            break;
+                    
+			default:
+			d = "Неверный выбор.";
+            break;
+            }
+
+            document.write(d);
+
+</script>
+</body>
+</html>

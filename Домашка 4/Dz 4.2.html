@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Metod Promt()</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    var num1 = prompt("Сколько вам лет");
+    var num2 = prompt("Cо скольки лет разрешено употребление алкоголя в вашей стране", "18");
+    var maxAge = 100;
+
+    var a = parseInt(num1);
+    var b = parseInt(num2);
+
+    if (a < 6 || a <= 12){ 
+    document.write("Категорически нельзя!!!");
+    }
+    else if (a > 12 && a < 18){ 
+    document.write("Можно, но исключительно в лечебных целях.");
+    }
+    else if (a > maxAge){
+        document.write("<img src ='art-animals2.jpg'")
+    }
+
+    else  
+    document.write("Стоит задуматься: А стоит ли начинать???");
+
+
+</script>
+</body>
+</html>
